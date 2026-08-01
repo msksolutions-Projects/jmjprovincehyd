@@ -1,0 +1,27 @@
+{
+  "sourceImages": 714,
+  "uniqueImages": 666,
+  "duplicateFiles": 48,
+  "galleryImages": 617,
+  "excludedTemplateAssets": 23,
+  "brandOnlyAssets": 26,
+  "publicationPdfs": 10,
+  "categories": {
+    "founder-history": 12,
+    "formation": 100,
+    "education": 15,
+    "healthcare": 12,
+    "social-service": 34,
+    "pastoral-spiritual": 39,
+    "eco-jpic": 5,
+    "leadership": 43,
+    "institutions": 20,
+    "bicentenary": 64,
+    "jubilee": 43,
+    "chapter-meetings": 99,
+    "community-events": 36,
+    "heavenly-abode": 88,
+    "publications": 7,
+    "general": 0
+  }
+}
