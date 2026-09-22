@@ -20,7 +20,15 @@ const GalleryPage = lazy(() => import("@/pages/GalleryPage").then((m) => ({ defa
 const PublicationsPage = lazy(() =>
   import("@/pages/PublicationsPage").then((m) => ({ default: m.PublicationsPage })),
 );
+const NewsPage = lazy(() => import("@/pages/NewsPage").then((m) => ({ default: m.NewsPage })));
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage").then((m) => ({ default: m.NotFoundPage })));
+const AdminLoginPage = lazy(() => import("@/admin/AdminLoginPage").then((m) => ({ default: m.AdminLoginPage })));
+const AdminRegisterPage = lazy(() => import("@/admin/AdminRegisterPage").then((m) => ({ default: m.AdminRegisterPage })));
+const AdminDashboardPage = lazy(() => import("@/admin/AdminDashboardPage").then((m) => ({ default: m.AdminDashboardPage })));
+const AdminNewsPage = lazy(() => import("@/admin/AdminNewsPage").then((m) => ({ default: m.AdminNewsPage })));
+const AdminNoticesPage = lazy(() => import("@/admin/AdminNoticesPage").then((m) => ({ default: m.AdminNoticesPage })));
+const AdminGalleryPage = lazy(() => import("@/admin/AdminGalleryPage").then((m) => ({ default: m.AdminGalleryPage })));
+const NoticesPage = lazy(() => import("@/pages/NoticesPage").then((m) => ({ default: m.NoticesPage })));
 
 const wrap = (node: ReactNode) => <Suspense fallback={<RouteLoader />}>{node}</Suspense>;
 
@@ -64,7 +72,7 @@ export const router = createBrowserRouter([
       // Media
       { path: "gallery", element: wrap(<GalleryPage />) },
       { path: "publications", element: wrap(<PublicationsPage />) },
-      { path: "news", element: wrap(<ContentPage slug="news-and-updates" eyebrow="Media" breadcrumbs={[MEDIA]} />) },
+      { path: "news", element: wrap(<NewsPage />) },
 
       // Contact
       { path: "contact", element: wrap(<ContactPage />) },
@@ -72,6 +80,13 @@ export const router = createBrowserRouter([
 
       { path: "worldwide", element: wrap(<ContentPage slug="the-congregation-worldwide" />) },
       { path: "content/:slug", element: wrap(<DynamicContentPage />) },
+      { path: "admin/login", element: wrap(<AdminLoginPage />) },
+      { path: "admin/register", element: wrap(<AdminRegisterPage />) },
+      { path: "admin/dashboard", element: wrap(<AdminDashboardPage />) },
+      { path: "admin/news", element: wrap(<AdminNewsPage />) },
+      { path: "admin/notices", element: wrap(<AdminNoticesPage />) },
+      { path: "admin/gallery", element: wrap(<AdminGalleryPage />) },
+      { path: "notices", element: wrap(<NoticesPage />) },
       { path: "*", element: wrap(<NotFoundPage />) },
     ],
   },

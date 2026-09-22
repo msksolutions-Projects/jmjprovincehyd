@@ -85,8 +85,10 @@ export const navigation: NavGroup[] = [
       { label: "Gallery", href: "/gallery", icon: "gallery" },
       { label: "Publications", href: "/publications", icon: "publications" },
       { label: "News and Updates", href: "/news", icon: "news" },
+      { label: "Notices", href: "/notices", icon: "news" },
     ],
   },
+
   {
     label: "Contact",
     items: [

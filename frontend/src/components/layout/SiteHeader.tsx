@@ -28,6 +28,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { navigation } from "@/data/navigation";
 import { navIcons } from "@/components/layout/navIcons";
@@ -205,7 +206,16 @@ export function SiteHeader() {
                 <SearchRoundedIcon />
               </IconButton>
             </Tooltip>
-
+            <Tooltip title="Administrator login">
+              <IconButton
+                component={RouterLink}
+                to="/admin/login"
+                aria-label="Administrator login"
+                sx={{ ml: 0.5 }}
+              >
+                <LockOutlinedIcon />
+              </IconButton>
+            </Tooltip>
             <IconButton
               onClick={() => setDrawerOpen(true)}
               aria-label="Open navigation menu"
